@@ -11,4 +11,4 @@ RUN cp /app/kafka-run-class.sh /app/kafka_2.11-0.11.0.1/bin/kafka-run-class.sh
 RUN chmod +x /app/kafka_2.11-0.11.0.1/bin/kafka-server-start.sh
 WORKDIR /app/kafka_2.11-0.11.0.1/
 RUN cp /app/run-kafka.sh .
-ENTRYPOINT run-kafka.sh
+ENTRYPOINT ./run-kafka.sh
