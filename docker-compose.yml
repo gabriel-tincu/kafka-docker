@@ -3,7 +3,7 @@ services:
   zookeeper:
     image: zookeeper:latest
   kafka1:
-    image: kafka:0.0.2
+    image: tincugabriel/kafka:0.2.1
     environment:
       - PORT=9092
       - HOST_IP=192.168.0.106
@@ -11,7 +11,7 @@ services:
     ports:
       - 9092:9092
   kafka2:
-    image: kafka:0.0.2
+    image: tincugabriel/kafka:0.2.1
     environment:
       - PORT=9093
       - HOST_IP=192.168.0.106
@@ -19,7 +19,7 @@ services:
     ports:
       - 9093:9093
   kafka3:
-    image: kafka:0.0.2
+    image: tincugabriel/kafka:0.2.1
     environment:
       - PORT=9094
       - HOST_IP=192.168.0.106
