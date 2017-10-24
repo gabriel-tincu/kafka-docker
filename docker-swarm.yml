@@ -6,6 +6,8 @@ services:
      - 2181:2181
   kafka1:
     image: tincugabriel/kafka:0.3.0
+    depends_on:
+    - zookeeper
     environment:
       - PORT=9092
       - HOST_IP=${HOST_IP}
@@ -14,6 +16,8 @@ services:
       - 9092:9092
   kafka2:
     image: tincugabriel/kafka:0.3.0
+    depends_on:
+    - zookeeper
     environment:
       - PORT=9093
       - HOST_IP=${HOST_IP}
@@ -22,6 +26,8 @@ services:
       - 9093:9093
   kafka3:
     image: tincugabriel/kafka:0.3.0
+    depends_on:
+    - zookeeper
     environment:
       - PORT=9094
       - HOST_IP=${HOST_IP}
