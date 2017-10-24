@@ -2,27 +2,29 @@ version: '2'
 services:
   zookeeper:
     image: zookeeper:latest
+    ports:
+     - 2181:2181
   kafka1:
-    image: tincugabriel/kafka:0.2.1
+    image: tincugabriel/kafka:0.3.0
     environment:
       - PORT=9092
-      - HOST_IP=192.168.0.106
+      - HOST_IP=${HOST_IP}
       - BROKER_ID=1
     ports:
       - 9092:9092
   kafka2:
-    image: tincugabriel/kafka:0.2.1
+    image: tincugabriel/kafka:0.3.0
     environment:
       - PORT=9093
-      - HOST_IP=192.168.0.106
+      - HOST_IP=${HOST_IP}
       - BROKER_ID=2
     ports:
       - 9093:9093
   kafka3:
-    image: tincugabriel/kafka:0.2.1
+    image: tincugabriel/kafka:0.3.0
     environment:
       - PORT=9094
-      - HOST_IP=192.168.0.106
+      - HOST_IP=${HOST_IP}
       - BROKER_ID=4
     ports:
       - 9094:9094
